@@ -8,6 +8,9 @@ A Streamlit app that:
 4) lets you **ask natural-language questions**. The app uses **OCI Generative AI (Grok-3-fast)** to plan a SQL/PGQ query, executes it against Oracle DB, then sends the result rows to an LLM for a **natural-language answer**.  
 There’s also an input to **append a sentence** and instantly create/merge new vertices/edges.
 
+### Disclaimer
+this project is used for demo purposes only and do not necessarily reflect Oracle best practices
+
 ---
 
 ## Contents
@@ -220,6 +223,5 @@ In Oracle ADB-S tables (`vertices`, `edges`) surfaced as a Property Graph named 
 
 ---
 
-## Project Status & Author
-- **Status**: Internal project / demo.  
+## Author
 - **Author**: Rahul Tasker | rahultasker@gmail.com
