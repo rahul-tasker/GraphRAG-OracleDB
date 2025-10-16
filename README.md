@@ -1,10 +1,10 @@
-# GraphRAG on Oracle 23ai
-_convert documents to a knowledge graph for natural language questions using Oracle Database 23ai, Oracle GenAI Service and OpenAI's API_
+# GraphRAG on Oracle AI Database
+_convert documents to a knowledge graph for natural language questions using Oracle AI Database, Oracle GenAI Service and OpenAI's API_
 
 A Streamlit app that:
 1) accepts a **.txt** or **.pdf** document,  
 2) extracts entities & relationships with **LangChain’s `LLMGraphTransformer`**,  
-3) uploads them to **Oracle Database 23ai (Autonomous Database Serverless)** as a SQL:2023 **Property Graph**, and  
+3) uploads them to **Oracle AI Database (Autonomous Database Serverless)** as a SQL:2023 **Property Graph**, and  
 4) lets you **ask natural-language questions**. The app uses **OCI Generative AI (Grok-3-fast)** to plan a SQL/PGQ query, executes it against Oracle DB, then sends the result rows to an LLM for a **natural-language answer**.  
 There’s also an input to **append a sentence** and instantly create/merge new vertices/edges.
 
@@ -30,7 +30,7 @@ this project is used for demo purposes only and do not necessarily reflect Oracl
 
 ## Features
 - **One-file ingestion** (TXT/PDF) → **entity/relationship graph** (no chunking).
-- **Oracle 23ai Property Graph**: stored in tables (`vertices`, `edges`) and exposed as `document_pg`.
+- **Oracle AI Database Property Graph**: stored in tables (`vertices`, `edges`) and exposed as `document_pg`.
 - **LLM-planned queries**: OCI Generative AI (Grok-3-fast) writes SQL:2023 graph patterns (`GRAPH_TABLE(...) MATCH ...`).
 - **Execution + Answering**: query runs in Oracle; results are summarized by an LLM to natural language.
 - **Inline growth**: add a sentence to create **more vertices/edges** (with merge rules).
@@ -49,7 +49,7 @@ this project is used for demo purposes only and do not necessarily reflect Oracl
 ## Prerequisites
 - **Python**: 3.11  
 - **Conda** environment (recommended)
-- **Oracle Autonomous Database Serverless** (23ai) with wallet
+- **Oracle Autonomous AI Database Serverless** with wallet
 - **OpenAI API key** (used by LangChain’s `LLMGraphTransformer`)
 - **OCI account** with access to **Generative AI Inference** (Grok-3-fast)
 
